@@ -23,7 +23,7 @@ To preview locally, just double-click `index.html`.
 
 Search `index.html` and `photos.html` for `EDIT:` and `YOUR-` to find every spot.
 
-- **Links** - swap in your Strava athlete URL, LinkedIn handle, GitHub username, and email.
+- **Links** - each one is a row in the links table in `index.html`.
 - **About / interests** - rewrite freely; each interest is one `<li>` line.
 - **Photos** - drop your images into `photos/` and update each `<figure>`:
   `src`, `href`, `alt` (a short description of the photo), and the caption.

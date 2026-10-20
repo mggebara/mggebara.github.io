@@ -185,10 +185,14 @@ table.links td {
 
 .album img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: 80vh;   /* keep tall photos from filling the whole screen */
+  margin: 0 auto;
   box-sizing: border-box;
 }
+.pair img { width: 100%; max-height: none; }
 /* linked images used to get a blue (or purple) border -- keep it */
 .album a img { border: 2px solid var(--link); }
 .album a:visited img { border-color: var(--visited); }

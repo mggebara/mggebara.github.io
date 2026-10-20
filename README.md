@@ -6,7 +6,7 @@ A tiny web 1.0 personal site. Plain HTML and CSS, no JavaScript, no build step.
 index.html     the whole site
 style.css      all the styling (colors are at the top in :root)
 404.html       shown by GitHub Pages for broken links
-photos/        your pictures (photo-1.jpg ... photo-6.jpg are placeholders)
+photos/        your pictures
 ```
 
 ## Put it on GitHub Pages

@@ -115,10 +115,9 @@ img.me {
 }
 
 /* ---------- projects ---------- */
-dl.projects { margin: 0; }
-dl.projects dt { margin-top: 12px; font-weight: bold; }
-dl.projects dt:first-child { margin-top: 0; }
-dl.projects dd { margin: 2px 0 0 1.6em; }
+ul.stars.projects li { margin: 0 0 12px; }
+ul.projects .pname { display: block; font-weight: bold; color: var(--navy); }
+ul.projects .pdesc { display: block; }
 
 /* ---------- interests ---------- */
 ul.stars {

@@ -51,13 +51,6 @@ body {
 /* ---------- header ---------- */
 header { text-align: center; }
 
-.tiny {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
-  color: #777;
-}
-
 h1 {
   margin: 6px 0 0;
   font-size: 46px;
@@ -86,7 +79,7 @@ h1 {
 .marquee span {
   display: inline-block;
   padding-left: 100%;
-  animation: ticker 24s linear infinite;
+  animation: ticker 16s linear infinite;
 }
 @keyframes ticker { to { transform: translateX(-100%); } }
 
@@ -146,7 +139,8 @@ ul.stars li::marker { color: #d4a017; }
 
 /* ---------- links table ---------- */
 table.links {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   border: 3px outset var(--silver);
   border-spacing: 3px;
   background: #fff;
@@ -154,12 +148,8 @@ table.links {
 table.links td {
   border: 2px inset var(--silver);
   padding: 6px 10px;
-  vertical-align: top;
-}
-table.links td:first-child {
-  width: 34%;
+  text-align: center;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 /* ---------- photo album ---------- */
@@ -221,70 +211,13 @@ table.links td:first-child {
   color: #777;
 }
 
-/* ---------- under construction tape ---------- */
-.construction {
-  margin: 34px 0 6px;
-  padding: 7px;
-  text-align: center;
-  background: repeating-linear-gradient(-45deg, #ffd800 0 14px, #111 14px 28px);
-}
-.construction span {
-  display: inline-block;
-  padding: 2px 10px;
-  background: #ffd800;
-  color: #111;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 /* ---------- footer ---------- */
 footer {
-  margin-top: 18px;
+  margin-top: 34px;
+  padding-top: 10px;
+  border-top: 3px groove var(--silver);
   text-align: center;
 }
-
-.counter-line {
-  margin: 0 0 14px;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 13px;
-}
-.counter {
-  display: inline-block;
-  padding: 1px 6px;
-  background: #000;
-  color: #ff3b3b;
-  border: 2px inset var(--silver);
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-/* 88x31 buttons, built in CSS instead of GIFs */
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  margin: 0 0 14px;
-}
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 88px;
-  height: 31px;
-  box-sizing: border-box;
-  border: 2px outset #ddd;
-  font: 10px/1.05 Verdana, Geneva, sans-serif;
-  text-align: center;
-}
-.badge small { font-size: 8px; }
-.b-html { background: #ffcc00; color: #000; }
-.b-nojs { background: #000; color: #39ff14; }
-.b-hand { background: #fff; color: var(--navy); font-weight: bold; }
-.b-any  { background: var(--navy); color: #fff; font-size: 9px; }
 
 .small {
   margin: 4px 0;
@@ -301,7 +234,7 @@ footer {
   .photo { padding: 6px 6px 8px; }
   .pair { gap: 10px; }
   .pair figcaption { font-size: 14px; }
-  table.links td:first-child { width: auto; }
+  table.links { width: 100%; }
 }
 
 /* ---------- respect people who don't want motion ---------- */

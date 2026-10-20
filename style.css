@@ -100,6 +100,16 @@ h2::before { content: "\25AA\00A0"; }
 
 section p { margin: 0 0 12px; }
 
+/* ---------- photo of me in the about section ---------- */
+#about::after { content: ""; display: block; clear: both; }   /* keep the floated photo inside the section */
+img.me {
+  float: right;
+  width: 160px;
+  height: 160px;
+  margin: 2px 0 8px 20px;
+  border: 1px solid #888;
+}
+
 /* ---------- interests ---------- */
 ul.stars {
   margin: 0;
@@ -187,6 +197,7 @@ footer {
 
 /* ---------- small screens ---------- */
 @media (max-width: 560px) {
+  img.me { float: none; display: block; margin: 0 auto 14px; }
   body { padding: 14px 8px 28px; font-size: 17px; }
   #page { padding: 14px 16px 22px; box-shadow: 5px 5px 0 #000; }
   h1 { font-size: 36px; }

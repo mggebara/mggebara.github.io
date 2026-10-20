@@ -39,5 +39,3 @@ Search `index.html` for `EDIT:` and `YOUR-` to find every spot.
 - Background color/stars: `html { ... }` near the top of `style.css`.
 - Page width: `max-width` in `#page`.
 - Title-bar headers: the `h2` rule.
-- The scrolling ticker and blinking "new!" stop automatically for visitors
-  who have reduced motion turned on.

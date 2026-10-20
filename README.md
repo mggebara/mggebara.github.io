@@ -37,6 +37,9 @@ Search `index.html` and `photos.html` for `EDIT:` and `YOUR-` to find every spot
 
 ## Changing the look
 
+After editing `style.css`, bump the `?v=` number in the stylesheet link at the top of
+`index.html`, `photos.html`, and `404.html` so browsers load the new version instead of a cached one.
+
 - Background color/stars: `html { ... }` near the top of `style.css`.
 - Page width: `max-width` in `#page`.
 - Title-bar headers: the `h2` rule.

@@ -59,6 +59,10 @@ h1 {
   text-shadow: 2px 2px 0 var(--silver);
 }
 
+/* the name links home, but keeps the heading's look */
+h1 a, h1 a:visited { color: inherit; text-decoration: none; }
+h1 a:hover, h1 a:focus { text-decoration: underline; }
+
 .subtitle {
   margin: 4px 0 14px;
   font-style: italic;

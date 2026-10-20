@@ -3,7 +3,8 @@
 A tiny web 1.0 personal site. Plain HTML and CSS, no JavaScript, no build step.
 
 ```
-index.html     the whole site
+index.html     home page (about, interests, links)
+photos.html    photo album
 style.css      all the styling (colors are at the top in :root)
 404.html       shown by GitHub Pages for broken links
 photos/        your pictures
@@ -20,7 +21,7 @@ To preview locally, just double-click `index.html`.
 
 ## Things to fill in
 
-Search `index.html` for `EDIT:` and `YOUR-` to find every spot.
+Search `index.html` and `photos.html` for `EDIT:` and `YOUR-` to find every spot.
 
 - **Links** - swap in your Strava athlete URL, LinkedIn handle, GitHub username, and email.
 - **About / interests** - rewrite freely; each interest is one `<li>` line.

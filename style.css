@@ -52,7 +52,7 @@ body {
 header { text-align: center; }
 
 h1 {
-  margin: 6px 0 0;
+  margin: 6px 0 16px;
   font-size: 46px;
   line-height: 1.1;
   color: var(--navy);
@@ -169,10 +169,6 @@ table.links td {
 
 .photo {
   margin: 0;
-  padding: 10px 10px 12px;
-  background: #fff;
-  border: 1px solid #888;
-  box-shadow: 4px 4px 0 #999;
   text-align: center;
 }
 
@@ -231,7 +227,6 @@ footer {
   #page { padding: 14px 16px 22px; box-shadow: 5px 5px 0 #000; }
   h1 { font-size: 36px; }
   .album { gap: 20px; }
-  .photo { padding: 6px 6px 8px; }
   .pair { gap: 10px; }
   .pair figcaption { font-size: 14px; }
   table.links { width: 100%; }

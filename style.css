@@ -114,6 +114,12 @@ img.me {
   border: 1px solid #888;
 }
 
+/* ---------- projects ---------- */
+dl.projects { margin: 0; }
+dl.projects dt { margin-top: 12px; font-weight: bold; }
+dl.projects dt:first-child { margin-top: 0; }
+dl.projects dd { margin: 2px 0 0 1.6em; }
+
 /* ---------- interests ---------- */
 ul.stars {
   margin: 0;

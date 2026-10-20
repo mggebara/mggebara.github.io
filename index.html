@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew Gebara's Home Page</title>
+  <meta name="description" content="Matthew Gebara's little corner of the web: interests, links, and a few photos.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%98%85</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page">
+
+  <!-- ============================== HEADER ============================== -->
+  <header id="top">
+    <p class="tiny">~*~ welcome, traveler ~*~</p>
+    <h1>Matthew Gebara</h1>
+    <p class="subtitle">a personal home page</p>
+    <div class="marquee" aria-hidden="true">
+      <span>&#9733; thanks for stopping by &#9733; this site is hand-written in HTML &amp; CSS &#9733; no trackers, no cookies, no JavaScript &#9733; sign the guestbook (send an email) &#9733; come back soon &#9733;</span>
+    </div>
+  </header>
+
+  <nav>
+    [ <a href="#about">about</a>
+    | <a href="#interests">interests</a>
+    | <a href="#links">links</a>
+    | <a href="#photos">photos</a> <span class="new">new!</span> ]
+  </nav>
+
+  <hr>
+
+  <!-- ============================== ABOUT ============================== -->
+  <!-- EDIT: rewrite this however you like. -->
+  <section id="about">
+    <h2>About me</h2>
+    <p>
+      Hi, I'm Matthew. I'm an AI software engineer in the Bay Area and a
+      Georgia Tech CS grad. Off the clock I'm usually outside moving, chipping
+      away at a cryptic crossword, reading about biology, or taking pictures of
+      whatever catches my eye.
+    </p>
+    <p>
+      This page is a small, old-fashioned place to keep a few of those things.
+      It will probably always be under construction.
+    </p>
+  </section>
+
+  <!-- ============================== INTERESTS ============================== -->
+  <!-- EDIT: add, remove, or reorder <li> lines. -->
+  <section id="interests">
+    <h2>Things I'm into</h2>
+    <ul class="stars">
+      <li><b>AI safety</b> &mdash; making AI systems trustworthy and auditable</li>
+      <li><b>Biology &amp; the natural sciences</b> &mdash; still my favorite rabbit hole</li>
+      <li><b>Poetry</b> &mdash; reading it, and writing it</li>
+      <li><b>Cryptic crosswords</b> &mdash; one clue a day, ideally in under a minute</li>
+      <li><b>Getting outside</b> &mdash; receipts on Strava</li>
+      <li><b>Photography</b> &mdash; mostly on walks; a few favorites are below</li>
+    </ul>
+  </section>
+
+  <!-- ============================== LINKS ============================== -->
+  <!-- EDIT: replace every URL containing YOUR- with your real one. -->
+  <section id="links">
+    <h2>Find me elsewhere</h2>
+    <table class="links">
+      <tr>
+        <td><a href="https://www.strava.com/athletes/YOUR-ATHLETE-ID">Strava</a></td>
+        <td>where my runs and rides get logged</td>
+      </tr>
+      <tr>
+        <!-- Minute Cryptic has no public profiles as far as I know, so this links the game itself. -->
+        <td><a href="https://www.minutecryptic.com/">Minute Cryptic</a></td>
+        <td>the daily cryptic clue I can't stop doing</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a></td>
+        <td>the professional version of me</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mggebara">GitHub</a></td>
+        <td>code, experiments, and the source of this page</td>
+      </tr>
+      <tr>
+        <td><a href="mailto:YOUR-EMAIL@example.com">E-mail</a></td>
+        <td>say hello &mdash; this is the guestbook</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ============================== PHOTOS ============================== -->
+  <!-- EDIT: put your pictures in the photos/ folder, then update src, href,
+       alt, and the caption for each <figure>.
+       - One photo per row: copy a whole <figure class="photo"> ... </figure> block.
+       - The side-by-side row is the <div class="pair"> block; cut and paste
+         that whole block to move it anywhere in the album. -->
+  <section id="photos">
+    <h2>Photo album</h2>
+    <p class="hint">click any photo to see it full size</p>
+    <div class="album">
+
+      <figure class="photo">
+        <a href="photos/photo-1.jpg"><img src="photos/photo-1.jpg" alt="Describe photo 1" loading="lazy"></a>
+        <figcaption>Caption for photo one<span class="meta">place &middot; year</span></figcaption>
+      </figure>
+
+      <figure class="photo">
+        <a href="photos/photo-2.jpg"><img src="photos/photo-2.jpg" alt="Describe photo 2" loading="lazy"></a>
+        <figcaption>Caption for photo two<span class="meta">place &middot; year</span></figcaption>
+      </figure>
+
+      <!-- the one row with two pictures side by side -->
+      <div class="pair">
+        <figure class="photo">
+          <a href="photos/photo-3.jpg"><img src="photos/photo-3.jpg" alt="Describe photo 3" loading="lazy"></a>
+          <figcaption>Caption for photo three<span class="meta">place &middot; year</span></figcaption>
+        </figure>
+        <figure class="photo">
+          <a href="photos/photo-4.jpg"><img src="photos/photo-4.jpg" alt="Describe photo 4" loading="lazy"></a>
+          <figcaption>Caption for photo four<span class="meta">place &middot; year</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="photo">
+        <a href="photos/photo-5.jpg"><img src="photos/photo-5.jpg" alt="Describe photo 5" loading="lazy"></a>
+        <figcaption>Caption for photo five<span class="meta">place &middot; year</span></figcaption>
+      </figure>
+
+      <figure class="photo">
+        <a href="photos/photo-6.jpg"><img src="photos/photo-6.jpg" alt="Describe photo 6" loading="lazy"></a>
+        <figcaption>Caption for photo six<span class="meta">place &middot; year</span></figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <div class="construction"><span>&#9888; this page is under construction (forever) &#9888;</span></div>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer>
+    <p class="counter-line">you are visitor # <span class="counter">??????</span></p>
+
+    <p class="badges">
+      <span class="badge b-html"><span><b>HTML</b>&nbsp;+&nbsp;CSS</span></span>
+      <span class="badge b-nojs"><span>NO&nbsp;JS<br><small>100% static</small></span></span>
+      <span class="badge b-hand"><span>hand<br>coded</span></span>
+      <span class="badge b-any"><span>best viewed<br>with any browser</span></span>
+    </p>
+
+    <!-- EDIT: bump this date whenever you change something. -->
+    <p class="small">last updated: October 19, 2026 &middot; &copy; 2026 Matthew Gebara</p>
+    <p class="small"><a href="#top">&uarr; back to top &uarr;</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* ===========================================================
+   Matthew's Home Page -- style.css
+   Plain CSS, no frameworks. Colors live in :root so they're
+   easy to change in one place.
+   =========================================================== */
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #fffdf2;      /* cream page */
+  --navy: #000080;
+  --sky: #1084d0;
+  --link: #0000ee;       /* classic browser blue */
+  --visited: #551a8b;    /* classic browser purple */
+  --hot: #cc0000;
+  --silver: #c0c0c0;
+  --night: #0b1240;      /* background behind the page */
+}
+
+/* ---------- the starry tiled background ---------- */
+html {
+  background-color: var(--night);
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1.6px),
+    radial-gradient(circle, #ffe66b 1px, transparent 1.6px),
+    radial-gradient(circle, #9fd3ff 0.8px, transparent 1.4px);
+  background-size: 52px 52px, 86px 86px, 37px 37px;
+  background-position: 0 0, 26px 31px, 11px 19px;
+}
+
+body {
+  margin: 0;
+  padding: 28px 12px 40px;
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+::selection { background: var(--navy); color: #fff; }
+
+/* ---------- the "window" the content sits in ---------- */
+#page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 30px 26px;
+  background: var(--paper);
+  border: 6px ridge var(--silver);
+  box-shadow: 8px 8px 0 #000;
+}
+
+/* ---------- header ---------- */
+header { text-align: center; }
+
+.tiny {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  color: #777;
+}
+
+h1 {
+  margin: 6px 0 0;
+  font-size: 46px;
+  line-height: 1.1;
+  color: var(--navy);
+  text-shadow: 2px 2px 0 var(--silver);
+}
+
+.subtitle {
+  margin: 4px 0 14px;
+  font-style: italic;
+  color: #444;
+}
+
+/* scrolling ticker (a CSS stand-in for the old <marquee> tag) */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #000;
+  color: #39ff14;
+  border: 3px inset var(--silver);
+  padding: 4px 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker 24s linear infinite;
+}
+@keyframes ticker { to { transform: translateX(-100%); } }
+
+/* ---------- nav ---------- */
+nav {
+  margin: 16px 0 6px;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+}
+
+.new {
+  color: var(--hot);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: blink 1.1s steps(2, start) infinite;
+}
+@keyframes blink { to { visibility: hidden; } }
+
+hr {
+  border: 0;
+  border-top: 3px groove var(--silver);
+  margin: 12px 0;
+}
+
+/* ---------- links: the old defaults, on purpose ---------- */
+a { color: var(--link); }
+a:visited { color: var(--visited); }
+a:hover, a:focus { color: var(--hot); }
+a:active { color: #ff0000; }
+
+/* ---------- section headers look like old title bars ---------- */
+h2 {
+  margin: 30px 0 12px;
+  padding: 4px 10px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, var(--navy), var(--sky));
+}
+h2::before { content: "\25AA\00A0"; }
+
+section p { margin: 0 0 12px; }
+
+/* ---------- interests ---------- */
+ul.stars {
+  margin: 0;
+  padding-left: 1.6em;
+  list-style: "\2605\00A0";
+}
+ul.stars li { margin: 4px 0; }
+ul.stars li::marker { color: #d4a017; }
+
+/* ---------- links table ---------- */
+table.links {
+  width: 100%;
+  border: 3px outset var(--silver);
+  border-spacing: 3px;
+  background: #fff;
+}
+table.links td {
+  border: 2px inset var(--silver);
+  padding: 6px 10px;
+  vertical-align: top;
+}
+table.links td:first-child {
+  width: 34%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ---------- photo album ---------- */
+.hint {
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: #555;
+}
+
+/* one photo per row, each in a white "print" frame */
+.album {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.photo {
+  margin: 0;
+  padding: 10px 10px 12px;
+  background: #fff;
+  border: 1px solid #888;
+  box-shadow: 4px 4px 0 #999;
+  text-align: center;
+}
+
+/* the one row with two photos side by side */
+.pair {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.pair .photo {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.album img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+/* linked images used to get a blue (or purple) border -- keep it */
+.album a img { border: 2px solid var(--link); }
+.album a:visited img { border-color: var(--visited); }
+.album a:hover img { border-color: var(--hot); }
+
+.album figcaption {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.album .meta {
+  display: block;
+  margin-top: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ---------- under construction tape ---------- */
+.construction {
+  margin: 34px 0 6px;
+  padding: 7px;
+  text-align: center;
+  background: repeating-linear-gradient(-45deg, #ffd800 0 14px, #111 14px 28px);
+}
+.construction span {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #ffd800;
+  color: #111;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ---------- footer ---------- */
+footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.counter-line {
+  margin: 0 0 14px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+}
+.counter {
+  display: inline-block;
+  padding: 1px 6px;
+  background: #000;
+  color: #ff3b3b;
+  border: 2px inset var(--silver);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* 88x31 buttons, built in CSS instead of GIFs */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 14px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 31px;
+  box-sizing: border-box;
+  border: 2px outset #ddd;
+  font: 10px/1.05 Verdana, Geneva, sans-serif;
+  text-align: center;
+}
+.badge small { font-size: 8px; }
+.b-html { background: #ffcc00; color: #000; }
+.b-nojs { background: #000; color: #39ff14; }
+.b-hand { background: #fff; color: var(--navy); font-weight: bold; }
+.b-any  { background: var(--navy); color: #fff; font-size: 9px; }
+
+.small {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 560px) {
+  body { padding: 14px 8px 28px; font-size: 17px; }
+  #page { padding: 14px 16px 22px; box-shadow: 5px 5px 0 #000; }
+  h1 { font-size: 36px; }
+  .album { gap: 20px; }
+  .photo { padding: 6px 6px 8px; }
+  .pair { gap: 10px; }
+  .pair figcaption { font-size: 14px; }
+  table.links td:first-child { width: auto; }
+}
+
+/* ---------- respect people who don't want motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee { white-space: normal; text-align: center; }
+  .marquee span { padding-left: 0; animation: none; }
+  .new { animation: none; }
+}

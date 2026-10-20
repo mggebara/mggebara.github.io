@@ -52,7 +52,7 @@ body {
 header { text-align: center; }
 
 h1 {
-  margin: 6px 0 16px;
+  margin: 6px 0 0;
   font-size: 46px;
   line-height: 1.1;
   color: var(--navy);
@@ -64,24 +64,6 @@ h1 {
   font-style: italic;
   color: #444;
 }
-
-/* scrolling ticker (a CSS stand-in for the old <marquee> tag) */
-.marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  background: #000;
-  color: #39ff14;
-  border: 3px inset var(--silver);
-  padding: 4px 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
-}
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: ticker 16s linear infinite;
-}
-@keyframes ticker { to { transform: translateX(-100%); } }
 
 /* ---------- nav ---------- */
 nav {
@@ -225,7 +207,5 @@ footer {
 
 /* ---------- respect people who don't want motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .marquee { white-space: normal; text-align: center; }
-  .marquee span { padding-left: 0; animation: none; }
   .new { animation: none; }
 }
